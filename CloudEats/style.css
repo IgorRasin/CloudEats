@@ -1,3 +1,4 @@
+/* main */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -19,7 +20,7 @@ a {
   text-decoration: none;
 }
 
-/* LAYOUT */
+/* layout */
 header {
   background: #111827;
   color: #f9fafb;
@@ -108,7 +109,7 @@ main {
   }
 }
 
-/* REUSABLE UI */
+/* UI elements */
 .section-header {
   margin-bottom: 1.25rem;
   display: flex;
@@ -375,7 +376,7 @@ footer {
   padding: 0.75rem 0 1rem 0;
 }
 
-/* AUTH PAGES */
+/* auth */
 .auth-page {
   max-width: 460px;
   margin: 3rem auto;
@@ -430,7 +431,7 @@ footer {
   font-size: 0.8rem;
 }
 
-/* SIMPLE HERO BANNER FOR ORG PAGES */
+/* hero banners? */
 .hero-header {
   background: url("https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=1600")
     center/cover no-repeat;
@@ -472,7 +473,7 @@ footer {
   margin-top: 0.2rem;
 }
 
-/* RESPONSIVE */
+/* shrink action */
 @media (max-width: 800px) {
   header {
     flex-direction: column;
@@ -500,12 +501,11 @@ footer {
 }
 
 #meal-grid .card:hover {
-  background: #000;        /* turn card black */
-  color: #fff;             /* turn text white */
-  transform: translateY(-3px); /* small lift effect (optional) */
+  background: #000;
+  color: #fff;
+  transform: translateY(-3px);
 }
 
-/* Ensure child elements also switch to white text */
 #meal-grid .card:hover .card-title,
 #meal-grid .card:hover .card-sub,
 #meal-grid .card:hover .muted,
@@ -514,13 +514,11 @@ footer {
   color: #fff !important;
 }
 
-/* Keep meal type tag (Low waste / Standard) unchanged */
 #meal-grid .card:hover .tag {
   color: inherit !important;
   background: inherit !important;
 }
 
-/* Keep the button visible with inverted colours */
 #meal-grid .card:hover button {
   background: #fff !important;
   color: #000 !important;
