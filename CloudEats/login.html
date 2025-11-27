@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>CloudEats – Login</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <div class="logo-pill">CE</div>
+      <span>CloudEats Prototype</span>
+    </div>
+
+    <nav>
+      <a href="login.html" class="active">Login</a>
+      <a href="register.html">Register</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="auth-page">
+      <h1>Welcome back</h1>
+      <p class="muted">
+        Log in to access your CloudEats dashboard. Your role controls which
+        parts of the system you can see.
+      </p>
+
+      <form id="login-form" class="auth-form">
+        <label>
+          Username
+          <input type="text" id="login-username" required />
+        </label>
+
+        <label>
+          Password
+          <input type="password" id="login-password" required />
+        </label>
+
+        <button type="submit" class="primary full-width">Login</button>
+
+        <p id="login-error" class="auth-error"></p>
+
+        <p class="muted small">
+          Don’t have an account?
+          <a href="register.html">Register here</a>
+        </p>
+      </form>
+    </section>
+  </main>
+
+  <footer>CloudEats • CSC1057 Prototype • No real orders or payments</footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

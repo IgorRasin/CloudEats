@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>CloudEats – Restaurant Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <div class="logo-pill">CE</div>
+      <span>CloudEats Prototype</span>
+    </div>
+
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="browse.html">Browse Meals</a>
+      <a href="orders.html">My Orders</a>
+      <a href="restaurant.html" class="active">Restaurant</a>
+      <a href="courier.html">Courier</a>
+      <a href="analytics.html">Analytics</a>
+    </nav>
+
+    <div class="cart-pill">
+      <span>🛒</span>
+      <span id="cart-count">0</span>
+      <span>items</span>
+    </div>
+  </header>
+
+  <main>
+    <div class="hero-header">
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <div class="hero-title">Restaurant workspace</div>
+        <div class="hero-subtitle">
+          Manage your menu and live orders through the CloudEats platform.
+        </div>
+      </div>
+    </div>
+
+    <section class="page">
+      <div class="section-header">
+        <div>
+          <h1>Menu & orders</h1>
+          <p>
+            Desktop version of your organisational Figma screens: interactive menu
+            management plus a live orders panel.
+          </p>
+        </div>
+        <span class="pill-badge">Restaurant portal</span>
+      </div>
+
+      <div class="grid">
+        <!-- MENU MANAGEMENT CARD -->
+        <div class="card">
+          <div class="card-header">
+            <div>
+              <div class="card-title">Menu</div>
+              <div class="card-sub">Edit, add and remove meals.</div>
+            </div>
+          </div>
+
+          <!-- dynamic menu items go here -->
+          <div
+            id="menu-grid"
+            class="grid"
+            style="grid-template-columns:repeat(3,minmax(0,1fr)); margin-top:0.75rem;"
+          ></div>
+
+          <hr style="border:none;border-top:1px solid #e5e7eb;margin:1rem 0;" />
+
+          <!-- add / edit form -->
+          <form id="menu-form" class="stack">
+            <div style="display:flex;justify-content:space-between;align-items:center;">
+              <h2 style="font-size:1rem;">Add or edit meal</h2>
+              <span class="muted small">
+                Images & data are stored only in this browser (prototype).
+              </span>
+            </div>
+
+            <div class="input-row">
+              <input
+                type="text"
+                id="menu-name"
+                placeholder="Meal name"
+                required
+              />
+              <input
+                type="number"
+                id="menu-price"
+                placeholder="Price (€)"
+                min="0"
+                step="0.1"
+                required
+              />
+            </div>
+
+            <textarea
+              id="menu-description"
+              rows="2"
+              placeholder="Short description"
+            ></textarea>
+
+            <div class="input-row">
+  <select id="menu-type" required>
+    <option value="" disabled selected>Select meal type</option>
+    <option value="standard">Standard</option>
+    <option value="lowWaste">Waste Reduction</option>
+  </select>
+  <span class="muted small">Choose whether this meal reduces food waste.</span>
+</div>
+
+            <div class="input-row">
+              <input type="file" id="menu-image" accept="image/*" />
+              <span class="muted small">
+                Optional image upload for this meal.
+              </span>
+            </div>
+
+            <div class="pill-row">
+              <button type="submit" class="primary" id="menu-submit">
+                Add meal
+              </button>
+              <button
+                type="button"
+                class="outline"
+                id="menu-cancel"
+                style="display:none;"
+              >
+                Cancel edit
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <!-- ORDERS CARD (unchanged logic) -->
+        <div class="card">
+          <div class="card-header">
+            <div>
+              <div class="card-title">Incoming orders</div>
+              <div class="card-sub">
+                Click Accept / Reject to update fulfilment status.
+              </div>
+            </div>
+          </div>
+
+          <table class="table" id="restaurant-orders-table">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Items</th>
+                <th>Status</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody id="restaurant-orders-body">
+              <tr>
+                <td colspan="4" class="muted">
+                  Customer orders will appear here after checkout.
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>CloudEats • CSC1057 Prototype • No real orders or payments</footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

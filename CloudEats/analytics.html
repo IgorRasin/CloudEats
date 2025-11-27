@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>CloudEats – Analytics</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <div class="logo-pill">CE</div>
+      <span>CloudEats Prototype</span>
+    </div>
+
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="browse.html">Browse Meals</a>
+      <a href="orders.html">My Orders</a>
+      <a href="restaurant.html">Restaurant</a>
+      <a href="courier.html">Courier</a>
+      <a href="analytics.html" class="active">Analytics</a>
+    </nav>
+
+    <div class="cart-pill">
+      <span>🛒</span>
+      <span id="cart-count">0</span>
+      <span>items</span>
+    </div>
+  </header>
+
+  <main>
+    <div class="hero-header">
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <div class="hero-title">Management analytics</div>
+        <div class="hero-subtitle">
+          High-level overview of orders, food saved and delivery performance.
+        </div>
+      </div>
+    </div>
+
+    <section class="page">
+      <div class="section-header">
+        <div>
+          <h1>Platform metrics</h1>
+          <p>
+            This page stands in for what would eventually be powered by Google
+            Vertex AI and cross-cloud analytics in your architecture document.
+          </p>
+        </div>
+        <span class="pill-badge">Admin view</span>
+      </div>
+
+      <div class="metric-grid">
+        <div class="metric">
+          <div class="metric-label">Total prototype orders</div>
+          <div class="metric-value" id="metric-orders">0</div>
+          <div class="metric-sub">Created during this browser session</div>
+        </div>
+        <div class="metric">
+          <div class="metric-label">Estimated portions saved</div>
+          <div class="metric-value" id="metric-portions">0</div>
+          <div class="metric-sub">
+            Based on low-waste items in orders (demo logic only)
+          </div>
+        </div>
+        <div class="metric">
+          <div class="metric-label">Delivered orders</div>
+          <div class="metric-value" id="metric-ontime">0</div>
+          <div class="metric-sub">
+            Count of orders marked “Delivered” by couriers
+          </div>
+        </div>
+        <div class="metric">
+          <div class="metric-label">Avg. items per order</div>
+          <div class="metric-value" id="metric-avg-items">0</div>
+          <div class="metric-sub">Calculated from local order data</div>
+        </div>
+      </div>
+
+      <p class="muted" style="margin-top:0.9rem">
+        For the client presentation, you can explain how this prototype metric
+        panel would scale into a full BI dashboard using cloud-based analytics
+        tools and a data warehouse.
+      </p>
+    </section>
+  </main>
+
+  <footer>CloudEats • CSC1057 Prototype • No real orders or payments</footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

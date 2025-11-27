@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>CloudEats – Register</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <div class="logo-pill">CE</div>
+      <span>CloudEats Prototype</span>
+    </div>
+
+    <nav>
+      <a href="login.html">Login</a>
+      <a href="register.html" class="active">Register</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="auth-page">
+      <h1>Create an account</h1>
+      <p class="muted">
+        Register as a customer, restaurant, courier, or admin. This is just a
+        prototype; credentials are stored locally in your browser.
+      </p>
+
+      <form id="register-form" class="auth-form">
+        <label>
+          Username
+          <input type="text" id="reg-username" required />
+        </label>
+
+        <label>
+          Password
+          <input type="password" id="reg-password" required />
+        </label>
+
+        <label>
+          Confirm password
+          <input type="password" id="reg-confirm" required />
+        </label>
+
+        <label>
+          Role
+          <select id="reg-role" required>
+            <option value="">Select a role…</option>
+            <option value="customer">Customer</option>
+            <option value="restaurant">Restaurant</option>
+            <option value="courier">Courier</option>
+            <option value="admin">Admin</option>
+          </select>
+        </label>
+
+        <button type="submit" class="primary full-width">Register</button>
+
+        <p id="register-error" class="auth-error"></p>
+
+        <p class="muted small">
+          Already registered?
+          <a href="login.html">Login here</a>
+        </p>
+      </form>
+    </section>
+  </main>
+
+  <footer>CloudEats • CSC1057 Prototype • No real orders or payments</footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

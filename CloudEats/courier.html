@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>CloudEats – Courier Board</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <div class="logo-pill">CE</div>
+      <span>CloudEats Prototype</span>
+    </div>
+
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="browse.html">Browse Meals</a>
+      <a href="orders.html">My Orders</a>
+      <a href="restaurant.html">Restaurant</a>
+      <a href="courier.html" class="active">Courier</a>
+      <a href="analytics.html">Analytics</a>
+    </nav>
+
+    <div class="cart-pill">
+      <span>🛒</span>
+      <span id="cart-count">0</span>
+      <span>items</span>
+    </div>
+  </header>
+
+  <main>
+    <div class="hero-header">
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <div class="hero-title">Deliveries board</div>
+        <div class="hero-subtitle">
+          Couriers pick up orders from restaurants and mark them as delivered.
+        </div>
+      </div>
+    </div>
+
+    <section class="page">
+      <div class="section-header">
+        <div>
+          <h1>Active deliveries</h1>
+          <p>
+            Mirrors your “Delivery – courier” Figma screen: a vertical list of
+            jobs with quick-action buttons for On route and Delivered.
+          </p>
+        </div>
+        <span class="pill-badge">Courier portal</span>
+      </div>
+
+      <table class="table" id="courier-table">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Pickup</th>
+            <th>Drop-off</th>
+            <th>Status</th>
+            <th>Progress</th>
+          </tr>
+        </thead>
+        <tbody id="courier-body">
+          <tr>
+            <td colspan="5" class="muted">
+              Orders accepted by the restaurant will appear here.
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p class="muted" style="margin-top:0.75rem">
+        In your presentation you can explain how this would connect to a
+        location-tracking service and push updates back to the customer.
+      </p>
+    </section>
+  </main>
+
+  <footer>CloudEats • CSC1057 Prototype • No real orders or payments</footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

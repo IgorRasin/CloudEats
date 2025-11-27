@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>CloudEats – Admin Overview</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- shared header from step 1 -->
+  <header>
+    <div class="logo">
+      <div class="logo-pill">CE</div>
+      <span>CloudEats Prototype</span>
+    </div>
+
+    <nav id="main-nav">
+      <a href="index.html" data-role="all">Home</a>
+      <a href="browse.html" data-role="customer admin">Browse Meals</a>
+      <a href="orders.html" data-role="customer admin">My Orders</a>
+      <a href="restaurant.html" data-role="restaurant admin">Restaurant</a>
+      <a href="courier.html" data-role="courier admin">Courier</a>
+      <a href="analytics.html" data-role="all">Analytics</a>
+      <a href="admin.html" data-role="admin" class="active">Admin</a>
+    </nav>
+
+    <div class="cart-pill">
+      <span>🛒</span>
+      <span id="cart-count">0</span>
+      <span>items</span>
+    </div>
+
+    <div id="user-pill" class="user-pill"></div>
+  </header>
+
+  <main>
+    <section class="page active">
+      <div class="section-header">
+        <div>
+          <h1>Admin overview</h1>
+          <p>
+            Admins can see all orders in the system, regardless of which role created them.
+            Use this in your video to talk about governance and monitoring.
+          </p>
+        </div>
+        <span class="pill-badge">Admin • Full visibility</span>
+      </div>
+
+      <table class="table">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Restaurant</th>
+            <th>Items</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody id="admin-orders-body">
+          <tr>
+            <td colspan="4" class="muted">
+              No orders yet. Place some orders as a customer to see them here.
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p class="muted" style="margin-top:0.75rem">
+        In a real system this page would be backed by admin APIs and audit logging.
+      </p>
+    </section>
+  </main>
+
+  <footer>CloudEats • CSC1057 Prototype • No real orders or payments</footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

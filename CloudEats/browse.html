@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>CloudEats – Browse Meals</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <div class="logo-pill">CE</div>
+      <span>CloudEats Prototype</span>
+    </div>
+
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="browse.html" class="active">Browse Meals</a>
+      <a href="orders.html">My Orders</a>
+      <a href="restaurant.html">Restaurant</a>
+      <a href="courier.html">Courier</a>
+      <a href="analytics.html">Analytics</a>
+    </nav>
+
+    <div class="cart-pill">
+      <span>🛒</span>
+      <span id="cart-count">0</span>
+      <span>items</span>
+    </div>
+  </header>
+
+  <main>
+    <section class="page">
+      <div class="section-header">
+        <div>
+          <h1>Browse meals</h1>
+          <p>
+            Desktop version of your meal browsing flow. Customers select meals,
+            add them to cart and simulate an order without real payments.
+          </p>
+        </div>
+        <span class="pill-badge">Customer-facing • Static data</span>
+      </div>
+
+      <div class="input-row">
+        <input
+          type="search"
+          id="meal-search"
+          placeholder="Search meals or restaurants…"
+        />
+        <select id="meal-filter">
+          <option value="all">All categories</option>
+          <option value="lowWaste">Low waste picks</option>
+          <option value="vegan">Vegan</option>
+          <option value="family">Family bundles</option>
+        </select>
+        <button class="outline" id="clear-filters">Clear filters</button>
+      </div>
+
+      <div id="meal-grid" class="grid"></div>
+
+      <div style="margin-top:1rem" class="stack">
+        <div class="muted">
+          When you click <strong>Add to cart</strong>, this prototype stores the
+          selection in local storage only. In production, this would create a
+          cart record in the Orders service.
+        </div>
+        <button class="primary" id="place-order" disabled>
+          Place order from cart
+        </button>
+      </div>
+    </section>
+  </main>
+
+  <footer>CloudEats • CSC1057 Prototype • No real orders or payments</footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

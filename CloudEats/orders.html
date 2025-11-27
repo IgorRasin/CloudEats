@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>CloudEats – My Orders</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <div class="logo-pill">CE</div>
+      <span>CloudEats Prototype</span>
+    </div>
+
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="browse.html">Browse Meals</a>
+      <a href="orders.html" class="active">My Orders</a>
+      <a href="restaurant.html">Restaurant</a>
+      <a href="courier.html">Courier</a>
+      <a href="analytics.html">Analytics</a>
+    </nav>
+
+    <div class="cart-pill">
+      <span>🛒</span>
+      <span id="cart-count">0</span>
+      <span>items</span>
+    </div>
+  </header>
+
+  <main>
+    <section class="page">
+      <div class="section-header">
+        <div>
+          <h1>My orders</h1>
+          <p>
+            Desktop equivalent of your “Orders & Deliveries” screen. Updates in
+            real-time as the restaurant / courier views change the status.
+          </p>
+        </div>
+        <span class="pill-badge">Customer journey</span>
+      </div>
+
+      <table class="table" id="orders-table">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Restaurant</th>
+            <th>Items</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody id="orders-body">
+          <tr>
+            <td colspan="4" class="muted">
+              No orders yet. Go to <strong>Browse Meals</strong> to place one.
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p class="muted" style="margin-top:0.75rem">
+        In a real system, this data would be fetched from an Orders API with
+        live updates via WebSockets or push notifications.
+      </p>
+    </section>
+  </main>
+
+  <footer>CloudEats • CSC1057 Prototype • No real orders or payments</footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

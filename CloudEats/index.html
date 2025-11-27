@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>CloudEats – Home</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <div class="logo-pill">CE</div>
+      <span>CloudEats Prototype</span>
+    </div>
+
+    <nav>
+      <a href="index.html" class="active">Home</a>
+      <a href="browse.html">Browse Meals</a>
+      <a href="orders.html">My Orders</a>
+      <a href="restaurant.html">Restaurant</a>
+      <a href="courier.html">Courier</a>
+      <a href="analytics.html">Analytics</a>
+    </nav>
+
+    <div class="cart-pill">
+      <span>🛒</span>
+      <span id="cart-count">0</span>
+      <span>items</span>
+    </div>
+  </header>
+
+  <main>
+    <section class="page">
+      <div class="section-header">
+        <div>
+          <h1>CloudEats overview</h1>
+          <p>
+            Unified view of the CloudEats platform. Use this dashboard in your
+            presentation to explain how customers, restaurants, couriers and
+            admins interact with the same cloud architecture.
+          </p>
+        </div>
+        <div class="stack">
+          <span class="pill-badge">Desktop prototype • CSC1057</span>
+          <a class="button primary" href="browse.html">
+            Try the customer journey →
+          </a>
+          <a class="button outline" href="restaurant.html">
+            Open organisational view
+          </a>
+        </div>
+      </div>
+
+      <div class="grid">
+        <div class="card">
+          <div class="card-header">
+            <div>
+              <div class="card-title">Customer perspective</div>
+              <div class="card-sub">
+                Browse meals, place orders, track status.
+              </div>
+            </div>
+            <span class="tag">Customer</span>
+          </div>
+          <p class="muted">
+            Demonstrates how the frontend would call the Menu and Order
+            services running on your cloud stack (API Gateway + EC2 / Lambda +
+            RDS / DynamoDB).
+          </p>
+          <div class="card-footer">
+            <a class="button secondary" href="browse.html">Browse meals</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <div>
+              <div class="card-title">Restaurant perspective</div>
+              <div class="card-sub">
+                Manage menus and incoming orders in real time.
+              </div>
+            </div>
+            <span class="tag">Restaurant</span>
+          </div>
+          <p class="muted">
+            This view maps directly to your organisational mock-ups: a single
+            page for live orders plus a menu management section.
+          </p>
+          <div class="card-footer">
+            <a class="button secondary" href="restaurant.html">
+              Restaurant dashboard
+            </a>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <div>
+              <div class="card-title">Courier & admin</div>
+              <div class="card-sub">Deliveries + analytics overview.</div>
+            </div>
+            <span class="tag">Courier / Admin</span>
+          </div>
+          <p class="muted">
+            Couriers update delivery status; admins review analytics such as
+            orders per day and food saved from waste, powered by cloud-based
+            analytics.
+          </p>
+          <div class="card-footer">
+            <a class="button secondary" href="courier.html">
+              Courier board
+            </a>
+            <a class="button outline" href="analytics.html">Admin analytics</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>CloudEats • CSC1057 Prototype • No real orders or payments</footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
